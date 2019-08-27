@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Iron Man Forever</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div style="position: absolute">
+<img src="images\ironman2.jpg" class="hover">
+</div>
+<div style="position: absolute" id="ironman-arise">
+<img src="images\ironman1.jpg" class="hover">
+</div>
+<script>
+	$("document").ready(function(){
+		console.log(screen.width+"*"+screen.height);
+		$("#ironman-arise").css({"max-width": 0, "overflow": "hidden"});
+		$(".hover").css({"height": screen.height, "width": screen.width});
+		$(".hover").mousemove(function(e){
+			//$("#avengers1").css({"opacity": 0.5});
+			$("#ironman-arise").css({"max-width": e.pageX, "overflow": "hidden"});
+		});
+	});
+</script>
+</body>
+</html>
